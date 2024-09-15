@@ -2,45 +2,103 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #f0f4f8;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
-  margin: 0;
+  padding-top: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #4A90E2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0.5rem;
+  max-width: 800px;
 }
 
 canvas {
-  border: 2px solid steelblue;
+  border: 3px solid #4A90E2;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
 }
 
 .toolbox {
-  background-color: steelblue;
-  border: 1px solid slateblue;
+  background: linear-gradient(135deg, #4A90E2, #50B5A6);
+  border-radius: 10px;
   display: flex;
-  width: 804px;
+  justify-content: space-between;
+  align-items: center;
+  width: 810px;
   padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .toolbox > * {
   background-color: #fff;
   border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   height: 50px;
   width: 50px;
-  margin: 0.25rem;
-  padding: 0.25rem;
+  margin: 0 0.5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.toolbox > *:last-child {
-  margin-left: auto;
+.toolbox > *:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.toolbox input[type="color"] {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#size {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0 1rem;
+  user-select: none;
+}
+
+button#clear {
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+button#clear:hover {
+  background-color: #c0392b;
 }

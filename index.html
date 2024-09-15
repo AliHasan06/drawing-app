@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Drawing App</title>
+    <title>Ali's Drawing App</title>
   </head>
   <body>
+    <header>
+      <h1 class="title">Ali's Drawing App</h1>
+      <p class="description">Choose your brush size, color, and start drawing. Clear the canvas whenever you're ready for a new masterpiece.</p>
+    </header>
+
     <canvas id="canvas" width="800" height="700"></canvas>
+    
     <div class="toolbox">
       <button id="decrease">-</button>
       <span id="size">10</span>
       <button id="increase">+</button>
       <input type="color" id="color">
-      <button id="clear">X</button>
+      <button id="clear">Clear Canvas</button>
     </div>
 
     <script src="script.js"></script>
